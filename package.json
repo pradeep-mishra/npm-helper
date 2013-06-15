@@ -1,0 +1,22 @@
+{
+  "name": "npm-util",
+  "version": "0.0.2",
+  "description": "A Node.JS module, provides an object oriented wrapper util for the NPM API. It allow to automatically install modules for Node.js",
+  "main": "./lib/npm.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/EladElrom/npm-util.git"
+  },
+  "author": "Elad Elrom",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "keywords": [
+    "npm",
+    "npm-wrapper",
+    "npm",
+    "wrapper",
+    "npm",
+    "auto",
+    "installer"
+  ]
+}
