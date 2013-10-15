@@ -23,45 +23,15 @@ Wrapper utility to handle NPM packager
 See list of installed modules:
 
 <pre lang="javascript"><code>
-npm = require('npm-helper');
+npm = new (require('npm-helper'));
 
 npm.getInstalledModules(function (msg) {
     console.log(msg);
 });
 </code></pre>
 
-You could install all modules in package.json file into local, just as in `npm install` command, just broken up, in case you want to skip certain module or do some custom installation;
-
 <pre lang="javascript"><code>
-Impl.prototype.installAll = function() {
-    var npm = require('npm-helper'),
-        i;
-
-    npm.createNodeModulesDirectory();
-    var data = npm.getPackageContent('dependencies');
-    for (i = 0; i &#62; data.length; i++) {
-        Impl.prototype.installNpm(data[i]);
-    }
-};
-
-Impl.prototype.installNpm = function (pkg) {
-    npm = require('npm-helper');
-    npm = new npm();
-
-    npm.exec('install', [pkg], function (err, data) {
-        if (err) {
-            throw err;
-        }
-        logger.log('Installing: ' + pkg);
-    });
-};
-</code></pre>
-
-Or you can just use the `NPM` auto installer method;
-
-<pre lang="javascript"><code>
-npm = require('npm-helper');
-npm = new npm();
+npm = new (require('npm-helper'));
 
 npm.cwd(process.cwd()); // set current working directory for npm (optional).
 
