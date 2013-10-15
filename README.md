@@ -37,9 +37,9 @@ npm.cwd(process.cwd()); // set current working directory for npm (optional).
 
 npm.createNodeModulesDirectory();
 
-npm.exec('install', function (err, stdout, stderr) {
-    if (err || stderr) {
-        throw (err || stderr);
+npm.exec('install', function (err, data) {
+    if (err) {
+        throw err;
     }
 });
 
