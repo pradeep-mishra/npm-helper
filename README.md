@@ -1,6 +1,6 @@
-# JavaScript NPM Wrapper Utility for Node.JS
+# JavaScript NPM Helper for Node.JS
 
-A Node.JS module, provides an object oriented wrapper for the NPM API.  It allow to automatically install modules for Node.js projects.  
+A Node.JS module,  It allow to automatically install modules for Node.js projects from your application.  
 
 It has features to look through the node_module files, see the "require" statements, and then list these for your `package.json` file or other usages.
 
@@ -16,22 +16,94 @@ or
 
       $ git clone git://github.com/pradeep-mishra/npm-helper.git
 
-Wrapper utility to handle NPM packager
+
 
 ## Example
 
 See list of installed modules:
 
 <pre lang="javascript"><code>
-npm = new (require('npm-helper'));
+NPM = require('npm-helper');
 
-npm.getInstalledModules(function (msg) {
-    console.log(msg);
+npm=new NPM();
+
+npm.getInstalledModules(function (data) {
+    console.log(data);
 });
 </code></pre>
 
+
+Create node_modules directory if not present:
+
 <pre lang="javascript"><code>
-npm = new (require('npm-helper'));
+NPM = require('npm-helper');
+
+npm=new NPM();
+
+npm.createNodeModulesDirectory();
+</code></pre>
+
+
+
+Get List of dependencies:
+
+<pre lang="javascript"><code>
+NPM = require('npm-helper');
+
+npm=new NPM();
+
+var list=npm.getDependencies();
+
+console.log(list);
+</code></pre>
+
+
+Get Attributes of package.json:
+
+<pre lang="javascript"><code>
+NPM = require('npm-helper');
+
+npm=new NPM();
+
+var name=npm.getPackageContent('name');
+
+console.log(name);
+</code></pre>
+
+
+
+Get List of Installed modules:
+
+<pre lang="javascript"><code>
+NPM = require('npm-helper');
+
+npm=new NPM();
+
+npm.getInstalledModules(function(data){
+    console.log(data);
+});
+</code></pre>
+
+
+
+Install Specific Module:
+
+<pre lang="javascript"><code>
+NPM = require('npm-helper');
+
+npm=new NPM();
+
+npm.installModule('express', function (err,data) {
+    console.log(err,data);
+});
+</code></pre>
+
+
+Install All modules
+<pre lang="javascript"><code>
+NPM = require('npm-helper');
+
+npm=new NPM();
 
 npm.cwd(process.cwd()); // set current working directory for npm (optional).
 
