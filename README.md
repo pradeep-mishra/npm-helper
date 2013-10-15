@@ -8,13 +8,13 @@ It has features to look through the node_module files, see the "require" stateme
 
   Install with the Node.JS package manager [npm](http://npmjs.org/):
 
-      $ npm install npm-util
+      $ npm install npm-helper
 
 or
 
   Install via git clone:
 
-      $ git clone git://github.com/EladElrom/npm-util.git
+      $ git clone git://github.com/EladElrom/npm-helper.git
 
 Wrapper utility to handle NPM packager
 
@@ -23,7 +23,7 @@ Wrapper utility to handle NPM packager
 See list of installed modules:
 
 <pre lang="javascript"><code>
-npm = require('npm-util');
+npm = require('npm-helper');
 
 npm.getInstalledModules(function (msg) {
     console.log(msg);
@@ -34,7 +34,7 @@ You could install all modules in package.json file into local, just as in `npm i
 
 <pre lang="javascript"><code>
 Impl.prototype.installAll = function() {
-    var npm = require('npm-util'),
+    var npm = require('npm-helper'),
         i;
 
     npm.createNodeModulesDirectory();
@@ -45,7 +45,7 @@ Impl.prototype.installAll = function() {
 };
 
 Impl.prototype.installNpm = function (pkg) {
-    npm = require('npm-util');
+    npm = require('npm-helper');
     npm = new npm();
 
     npm.exec('install', [pkg], function (err, data) {
@@ -60,7 +60,7 @@ Impl.prototype.installNpm = function (pkg) {
 Or you can just use the `NPM` auto installer method;
 
 <pre lang="javascript"><code>
-npm = require('npm-util');
+npm = require('npm-helper');
 npm = new npm();
 
 npm.cwd(process.cwd()); // set current working directory for npm (optional).
