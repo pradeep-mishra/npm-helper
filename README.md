@@ -93,6 +93,8 @@ NPM = require('npm-helper');
 
 npm=new NPM();
 
+npm.createNodeModulesDirectory();
+
 npm.installModule('express', function (err,data) {
     console.log(err,data);
 });
