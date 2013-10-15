@@ -115,6 +115,14 @@ npm.exec('install', function (err, data) {
     }
 });
 
+OR
+
+npm.install(function (err, data) {
+    if (err) {
+        throw err;
+    }
+});
+
 
 </code></pre>
 
