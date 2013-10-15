@@ -63,6 +63,8 @@ Or you can just use the `NPM` auto installer method;
 npm = require('npm-util');
 npm = new npm();
 
+npm.cwd(process.cwd()); // set current working directory for npm (optional).
+
 npm.exec('install', function (err, data) {
     if (err) {
         throw err;
