@@ -1,6 +1,6 @@
 {
   "name": "npm-helper",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A Node.JS module, provides an object oriented wrapper util for the NPM API. It allow to automatically install modules for Node.js",
   "main": "./lib/npm.js",
   "repository": {

@@ -14,7 +14,7 @@ or
 
   Install via git clone:
 
-      $ git clone git://github.com/EladElrom/npm-helper.git
+      $ git clone git://github.com/pradeep-mishra/npm-helper.git
 
 Wrapper utility to handle NPM packager
 
