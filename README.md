@@ -1,3 +1,7 @@
+[![NPM](https://nodei.co/npm/npm-helper.svg?downloads=true&downloadRank=true)](https://nodei.co/npm/npm-helper/)&nbsp;&nbsp;
+[![Build Status](https://travis-ci.org/pradeep-mishra/npm-helper.svg?branch=master)](https://travis-ci.org/pradeep-mishra/npm-helper)
+
+
 # JavaScript NPM Helper for Node.JS
 
 A Node.JS module,  It allow to automatically install modules for Node.js projects from your application.  
@@ -117,7 +121,7 @@ npm.exec('install', function (err, data) {
     }
 });
 
-// OR
+OR
 
 npm.install(function (err, data) {
     if (err) {

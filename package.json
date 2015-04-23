@@ -1,26 +1,24 @@
 {
   "name": "npm-helper",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "A Node.JS module, It allow to automatically install modules for Node.js from your application",
   "main": "./lib/npm.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/pradeep-mishra/npm-helper.git"
   },
-  "author": "Pradeep Mishra",
+  "author": {
+    "name": "Pradeep Mishra"
+  },
   "license": "MIT",
   "readmeFilename": "README.md",
   "keywords": [
     "npm",
     "npm-wrapper",
+    "npm",
     "wrapper",
+    "npm",
     "auto",
-    "installer",
-    "helper",
-    "node-npm",
-    "install",
-    "npm-install",
-    "commands",
-    "npm-commands"
+    "installer"
   ]
 }
