@@ -117,7 +117,7 @@ npm.exec('install', function (err, data) {
     }
 });
 
-OR
+// OR
 
 npm.install(function (err, data) {
     if (err) {

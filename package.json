@@ -13,10 +13,14 @@
   "keywords": [
     "npm",
     "npm-wrapper",
-    "npm",
     "wrapper",
-    "npm",
     "auto",
-    "installer"
+    "installer",
+    "helper",
+    "node-npm",
+    "install",
+    "npm-install",
+    "commands",
+    "npm-commands"
   ]
 }
